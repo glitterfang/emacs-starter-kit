@@ -18,7 +18,7 @@
       (font-lock-builtin-face ((t (:italic t :foreground "#FFF"))))
         (font-lock-comment-face ((t (:foreground "#835c8d"))))
        (font-lock-comment-delimiter-face ((t (:foreground "#835c8d"))))
-       (font-lock-constant-face ((t (:bold t :foreground "#33c4fa"))))
+       (font-lock-constant-face ((t (:bold t :foreground"#33c4fa"))))))      
        (font-lock-doc-string-face ((t (:foreground "#00dc49"))))
        (font-lock-doc-face ((t (:foreground "gray"))))
        (font-lock-reference-face ((t (:foreground "red"))))
@@ -40,7 +40,5 @@
        
        (minibuffer-prompt ((t (:foreground "#835c8d"))))
     )
-   )
-  )
 
 

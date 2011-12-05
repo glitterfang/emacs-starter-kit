@@ -22,7 +22,12 @@
 
 (load "~/.emacs.d/vendor/vibrant-ink")
 ;; (color-theme-vivid-chalk)
-(color-theme-woodbridge)
+;; (load-file "~/projects/woodbridge-theme/woodbridge.el")
+
+(load "~/.emacs.d/vendor/color-theme-chocolate-rain.el")
+(color-theme-chocolate-rain)
+
+;; (color-theme-twilight)
 
 (setq-default tab-width 2)
 
@@ -50,7 +55,6 @@
             (expand-file-name
              (concat "#%" (buffer-name) "#")))))
 
-
 (set 'tab-width 2)
 (setq column-number-mode t)
 
@@ -67,28 +71,42 @@
 
 
 
-(textmate-mode)
-
 (rvm-use-default)
 
 ;; Peepopen
 
 (add-to-list 'load-path "~/.emacs.d/vendor/")
 (require 'peepopen)
+(textmate-mode)
 (setq ns-pop-up-frames nil)
 
 (global-linum-mode t)
 
 ;; Revert annoying indent behavior of DEL in Sass.
 (add-hook 'sass-mode-hook (lambda () (define-key sass-mode-map (kbd "<backspace>") 'delete-backward-char)))
+
+;; Drive slow when you see those hos.
+;; a school full of stones, they named me k-rock so they'd leave me alone.n
+
+;; Drive slow.  That's all I'm saying.  Drive slow homie.. homie..
+;; Turn your hazard lights on when you see them hos..
+
+;; What do I have if I don't have my interwebs.
+
+
 ;; Org Mode
+
+(require 'org-install)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-;; (setq org-startup-indented t) 
+(setq org-log-done 'note)
+(setq org-log-done 'time)
+
+;; (setq org-startup-indented t)
 
 ;; Ack Integration
 
@@ -99,17 +117,14 @@
 (autoload 'ack-find-file "full-ack" nil t)
 
 
+(set-face-attribute 'default nil :font "Menlo" :height 120)
+
 ;;  A little bit of lisp
 
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 
-(set-face-attribute 'default nil :font "Inconsolata")
-
 (add-hook 'text-mode 'org-mode)
 
-
-;; (add-to-list 'load-path "~/.emacs.d/vendor/jekyll")
-;; (require 'jekyll)
 
 ;; (global-set-key (kbd "C-c b P") 'jekyll-publish-post)
 ;; (global-set-key (kbd "C-c b p") (lambda () 

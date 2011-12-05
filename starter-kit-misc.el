@@ -15,33 +15,33 @@
 (prefer-coding-system 'utf-8)
 (ansi-color-for-comint-mode-on)
 
-(setq visible-bell t
-      fringe-mode (cons 4 0)
-      echo-keystrokes 0.1
-      font-lock-maximum-decoration t
-      inhibit-startup-message t
-      transient-mark-mode t
-      color-theme-is-global t
-      shift-select-mode nil
-      mouse-yank-at-point t
-      require-final-newline t
-      truncate-partial-width-windows nil
-      uniquify-buffer-name-style 'forward
-      ffap-machine-p-known 'reject
-      whitespace-style '(trailing lines space-before-tab
-                                  face indentation space-after-tab)
-      whitespace-line-column 100
-      ediff-window-setup-function 'ediff-setup-windows-plain
-      oddmuse-directory (concat dotfiles-dir "oddmuse")
-      xterm-mouse-mode t
-      save-place-file (concat dotfiles-dir "places"))
+;; (setq visible-bell t
+;;       fringe-mode (cons 4 0)
+;;       echo-keystrokes 0.1
+;;       font-lock-maximum-decoration t
+;;       inhibit-startup-message t
+      ;; transient-mark-mode t
+      ;; color-theme-is-global t
+      ;; shift-select-mode nil
+      ;; mouse-yank-at-point t
+;;       require-final-newline t
+;;       truncate-partial-width-windows nil
+;;       uniquify-buffer-name-style 'forward
+;;       ffap-machine-p-known 'reject
+;;       whitespace-style '(trailing lines space-before-tab
+;;                                   face indentation space-after-tab)
+;;       whitespace-line-column 100
+;;       ediff-window-setup-function 'ediff-setup-windows-plain
+;;       oddmuse-directory (concat dotfiles-dir "oddmuse")
+;;       xterm-mouse-mode t
+;;       save-place-file (concat dotfiles-dir "places"))
 
 (add-to-list 'safe-local-variable-values '(lexical-binding . t))
 (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 
 ;; Set this to whatever browser you use
 ;; (setq browse-url-browser-function 'browse-url-firefox)
-;; (setq browse-url-browser-function 'browse-default-macosx-browser)
+(setq browse-url-browser-function 'browse-default-macosx-browser)
 ;; (setq browse-url-browser-function 'browse-default-windows-browser)
 ;; (setq browse-url-browser-function 'browse-default-kde)
 ;; (setq browse-url-browser-function 'browse-default-epiphany)
